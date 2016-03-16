@@ -10,6 +10,17 @@ class Array
     unique
   end
 
+  def two_sums
+    pairs = []
+
+    self.each_with_index do |num1, i|
+      self[i+1..-1].each_with_index do |num2, j|
+        pairs << [i, j + i + 1] if num1 + num2 == 0
+      end
+    end
+
+    pairs
+  end
 end
 
-[1,2,3].my_uniq
+p [1, -1].two_sums
