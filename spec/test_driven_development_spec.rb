@@ -2,7 +2,7 @@ require 'rspec'
 require 'test_driven_development'
 
 # [1, 2, 1, 3, 3].uniq # => [1, 2, 3]
-describe "Array" do
+describe Array do
   describe "#my_uniq" do
     it "works with an empty array" do
       expect([].my_uniq).to eq([])
